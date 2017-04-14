@@ -45,3 +45,5 @@ group :development do
   gem 'spring'
 end
 
+# Rails c feature
+gem  'pry-rails'
