@@ -1,4 +1,4 @@
-<%= form_for(@contact) do |f| %>
+<%= form_for(@contact, html: {:class => 'basic-grey'}) do |f| %>
   <% if @contact.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@contact.errors.count, "error") %> prohibited this contact from being saved:</h2>
@@ -10,7 +10,7 @@
       </ul>
     </div>
   <% end %>
-
+  <h1>Contacts</h1>
   <div class="field">
     <%= f.label :name %><br>
     <%= f.text_field :name %>
@@ -27,7 +27,9 @@
     <%= f.label :rmk %><br>
     <%= f.text_field :rmk %>
   </div>
-  <div class="actions">
-    <%= f.submit %>
+  <div class="field">
+    <label for=""></label>
+    <%= f.submit 'Save', :class => 'button' %>
+    <%= link_to 'Back', contacts_path, :class => 'button' %>
   </div>
 <% end %>
