@@ -33,7 +33,7 @@ Contact.create!(
   name: Faker::Name.name,
   email: Faker::Internet.email,
   kind: Kind.all.sample,
-  rmk: Faker::Lorem.paragraph(4)
+  rmk: LeroleroGenerator.sentence(5)
 )
 puts "****************************************"
 puts "Gerando o contato #{c.to_s}"
