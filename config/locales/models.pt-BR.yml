@@ -10,6 +10,9 @@
       phone:
         one: Telefone
         other: Telefones
+      kind:
+        one: Tipo de Contato
+        other: Tipos de Contatos
     attributes:
       contact:
         name: Nome
@@ -23,3 +26,5 @@
         state: Estado
       phone:
         phone: Telefone
+      kind:
+        description: Descrição

@@ -1,8 +1,8 @@
-<h1><%= t 'hello' %></h1>
-<h4><%= l Date.today %></h4>
+<div class="basic-grey">
+<h1><%= t 'title.entry' %></h1>
+
 <ul>
-  <li><%= link_to 'Kinds', kinds_path  %></li>
-  <li><%= link_to 'Contacts', contacts_path  %></li>
-  <li><%= link_to 'Addresses', addresses_path  %></li>
-  <li><%= link_to 'Phones', phones_path  %></li>
+  <li><%= link_to 'Kinds', kinds_path, :class => 'button'  %></li><br /><br /><br />
+  <li><%= link_to 'Contacts', contacts_path, :class => 'button'  %></li>
 </ul>
+</div>
