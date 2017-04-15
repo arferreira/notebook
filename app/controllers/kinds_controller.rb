@@ -4,8 +4,11 @@ class KindsController < ApplicationController
   # GET /kinds
   # GET /kinds.json
   def index
-    @title = "Notebook Contacts | The usefull contacts notes ;)"
-    @kinds = Kind.order(:description).page params[:page]
+    respond_to do |format|
+      format.html { @kinds = Kind.order(:description).page params[:page] }
+      format.js 
+    end
+
   end
 
   # GET /kinds/1
