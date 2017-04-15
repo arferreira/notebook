@@ -1,5 +1,6 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
+  before_action :kind_options_for_select, only: [:edit, :update, :create, :new]
 
   # GET /contacts
   # GET /contacts.json
@@ -16,19 +17,16 @@ class ContactsController < ApplicationController
   def new
     @contact = Contact.new
     @contact.build_address
-    kind_options_for_select
   end
 
   # GET /contacts/1/edit
   def edit
-    kind_options_for_select
   end
 
   # POST /contacts
   # POST /contacts.json
   def create
     @contact = Contact.new(contact_params)
-
     respond_to do |format|
       if @contact.save
         format.html { redirect_to @contact, notice: 'Contact was successfully created.' }
