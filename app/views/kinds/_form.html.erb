@@ -1,3 +1,4 @@
+<div class="basic-grey">
 <%= form_for(@kind) do |f| %>
   <% if @kind.errors.any? %>
     <div id="error_explanation">
@@ -10,12 +11,14 @@
       </ul>
     </div>
   <% end %>
-
+  <h1><%= @kind.model_name.human(:count => 1) %></h1>
   <div class="field">
     <%= f.label :description %><br>
     <%= f.text_field :description %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit 'Save', :class => 'button' %>
+    <%= link_to t('buttons.back'), kinds_path, :class => 'button' %>
   </div>
 <% end %>
+</div>

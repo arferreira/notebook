@@ -7,6 +7,12 @@
       address:
         one: Endereço
         other: Endereços
+      phone:
+        one: Telefone
+        other: Telefones
+      kind:
+        one: Tipo de Contato
+        other: Tipos de Contatos
     attributes:
       contact:
         name: Nome
@@ -18,3 +24,7 @@
         street: Logradouro
         city: Cidade
         state: Estado
+      phone:
+        phone: Telefone
+      kind:
+        description: Descrição

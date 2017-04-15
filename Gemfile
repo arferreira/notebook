@@ -55,3 +55,6 @@ gem 'faker'
 gem 'rails-i18n', '~> 4.0.0'
 
 gem 'lerolero_generator'
+
+# Dynamic nested forms using jQuery made easy; works with formtastic, simple_form or default forms http://github.com/nathanvda/cocoon
+gem "cocoon"
