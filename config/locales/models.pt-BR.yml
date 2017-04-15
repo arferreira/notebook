@@ -7,6 +7,9 @@
       address:
         one: Endereço
         other: Endereços
+      phone:
+        one: Telefone
+        other: Telefones
     attributes:
       contact:
         name: Nome
@@ -18,3 +21,5 @@
         street: Logradouro
         city: Cidade
         state: Estado
+      phone:
+        phone: Telefone

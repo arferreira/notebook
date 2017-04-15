@@ -2,7 +2,7 @@ namespace :utils do
   desc "# Create phones and addresses for our app"
   task seed: :environment do
     puts "****************************************"
-    puts "Criando telefones para o sistema"
+    puts "Create phones for the app"
     puts "****************************************"
     puts "\n"
     100.times do |p|
@@ -10,12 +10,12 @@ namespace :utils do
         phone: Faker::PhoneNumber.cell_phone,
         contact: Contact.all.sample
       )
-      puts "Criando o telefone #{p.to_s}"
+      puts "Create the phone #{p.to_s}"
       puts "****************************************"
     end
-    puts "Telefones criados com sucesso!"
+    puts "Phones created was success!"
     puts "****************************************"
-    puts "Criando endereços para os contatos do sistema"
+    puts "Create addresses for contacts app"
     puts "****************************************"
     puts "\n"
     Contact.all.each do |a|
@@ -25,11 +25,11 @@ namespace :utils do
         state: Faker::Address.state_abbr,
         contact: a
       )
-      puts "Gerando endereço para #{a.name}"
+      puts "Generate address for  #{a.name}"
       puts "****************************************"
       puts "\n"
     end
-    puts "Endereços gerados com sucesso!"
+    puts "Addresses generated with success!"
     puts "****************************************"
   end
 
