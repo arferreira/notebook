@@ -69,7 +69,9 @@ class ContactsController < ApplicationController
     def set_contact
       @contact = Contact.find(params[:id])
     end
-
+    def state_options_for_select
+      ESTADOS_BRASILEIROS
+    end
     def kind_options_for_select
       @kind_options_for_select = Kind.all
     end

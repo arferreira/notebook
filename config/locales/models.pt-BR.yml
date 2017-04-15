@@ -5,6 +5,6 @@
     attributes:
       contact:
         name: Nome
-        email: Email
+        email: Email 
         kind: Tipo de Contato
         rmk: Observação
