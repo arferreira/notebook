@@ -15,6 +15,7 @@ class ContactsController < ApplicationController
   # GET /contacts/new
   def new
     @contact = Contact.new
+    @contact.build_address
     kind_options_for_select
   end
 
@@ -68,13 +69,15 @@ class ContactsController < ApplicationController
     def set_contact
       @contact = Contact.find(params[:id])
     end
-
+    def state_options_for_select
+      ESTADOS_BRASILEIROS
+    end
     def kind_options_for_select
       @kind_options_for_select = Kind.all
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def contact_params
-      params.require(:contact).permit(:name, :email, :kind_id, :rmk)
+      params.require(:contact).permit(:name, :email, :kind_id, :rmk, address_attributes: [:street, :city, :state])
     end
 end
