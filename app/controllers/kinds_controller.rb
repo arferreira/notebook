@@ -5,7 +5,7 @@ class KindsController < ApplicationController
   # GET /kinds.json
   def index
     @title = "Notebook Contacts | The usefull contacts notes ;)"
-    @kinds = Kind.all
+    @kinds = Kind.order(:description).page params[:page]
   end
 
   # GET /kinds/1
