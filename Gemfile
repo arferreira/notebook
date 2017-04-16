@@ -1,6 +1,7 @@
 source 'https://rubygems.org'
 
-
+# Bundler for Rails-assets
+gem 'bundler', '>= 1.8.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.5'
 # Use sqlite3 as the database for Active Record
@@ -15,8 +16,6 @@ gem 'coffee-rails', '~> 4.1.0'
 
 # gem 'therubyracer', platforms: :ruby
 
- # Bundler-like DSL + rake tasks for Bower on Rails
-gem "bower-rails", "~> 0.11.0"
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -65,3 +64,8 @@ gem "cocoon"
 
 #⚡ A Scope & Engine based, clean, powerful, customizable and sophisticated paginator for Ruby webapps https://github.com/amatsuda/kaminari/…
 gem 'kaminari'
+
+# Rails-assets
+source 'https://rails-assets.org' do
+  gem 'rails-assets-notifyjs'
+end
