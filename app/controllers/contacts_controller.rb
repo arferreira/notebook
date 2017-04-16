@@ -1,7 +1,7 @@
 class ContactsController < ApplicationController
   before_action :set_contact, only: [:show, :edit, :update, :destroy]
   before_action :kind_options_for_select, only: [:edit, :update, :create, :new]
-
+  http_basic_authenticate_with name: "admin", password: "123456", only: :destroy
   # GET /contacts
   # GET /contacts.json
   def index
